@@ -1,0 +1,64 @@
+SEKÝTAP kitap tanýtým sitesi
+
+Salih Emre Kul
+0403030024
+
+Muðla,2009
+//////////////////////////////////////////////////
+
+veritabaný giriþ bilgileri
+---------------------------------
+Kullanýcý Adý	: salihemrekul
+Anamakine	: localhost
+Parola		: 0403030024
+database	: salihemrekul
+
+kullanýcýlar
+---------------------------------
+Kullanýcý Adý	: admin
+Parola		: admin
+Kullanýcý Adý	: salih
+Parola		: sa
+
+
+site
+---------------------------------
+
+sitede admin giriþi yapýldýðýnda
+
+1.Yeni kitap ekleme
+2.Yeni kitap türü ekleme
+3.Yeni yazar kaydý
+4.Kitaplara yorum yapabilme
+5.Kitaplarý favorilerime ekleme 
+6.Yeni kullanýcý kaydý
+7.Kitap bilgi güncelleme
+8.kullanýcý bilgi güncelleme
+
+iþlemleini gerçekleþtirmektedir
+
+NOT :	Favarilerime ekleme iþlemi tam çalýþmakta sadece listedeki delete iþlemi tamamlanmadý
+	kitap bilgi güncellede ise kitap ismi deðiþtirilmeden güncelleme gerçekleþtirilmiyor
+
+	
+sitede user giriþi yapýldýðýnda
+
+1.hesap bilgilerini görebilmekte
+2.favorilerim ve favorilerime ekle kýsýmlarýný kullanabilme
+3.yorum yazabilme
+
+ gibi iþlemleri gerçekleþtirebilir
+
+
+
+siteye giriþ yapýlmassa
+----------------------------------
+
+Normal olarak sitedeki kayýtlý kitaplarý görebilmekte
+kayýtlý yazarlarý ve yayýnevlerini görebilmekte
+yine yazarlarýn hayatýný ve son cýkan kitaplarýný görebilmekte
+kayýtlý kitaplarýn bilgilerini okuyabilmekte fakat yorum yazamamakta ve favorilerime ekle kýsýmlarýný görememektedir.
+
+
+
+

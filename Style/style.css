@@ -1,0 +1,306 @@
+﻿body{
+	margin:0 auto;
+	padding:0;
+	
+	font:76% Verdana, Helvetica, Tahoma, Arial, sans-serif;
+	background-color:#6B74AE;
+	color:#494949;
+}
+img.kapakresim{
+	width:120px;
+	height:150px;
+	margin : 10px 10px 10px 10px;
+	}
+#listeleme{
+	list-style:none;
+	}
+.rlink{
+	border:#ffffff;
+}
+.rlink a:hover{
+	border:#ffffff;
+}
+img.avatar {
+	float: left;
+	margin : 3px 0px 10px 10px;
+	padding : 3px;
+}
+
+/*sidebarlinkleri*/
+.sidebarlinkleri li{
+	list-style-image:url(images/ok.ico);
+	
+	}
+.sidebarlinkleri li:hover{
+	list-style-image:url(images/ko.ico);
+	
+}
+.sidebarlinkleri li a{
+	display: block;
+	width:100%;
+
+	border-top:1px solid #fff;
+	font:bold 1em/2em verdana;
+}
+
+.sidebarlinkleri li a:hover{
+	text-decoration: none;
+	color:#8C37D9;
+	
+	}
+/*ikinci linkler*/
+.sayfalink li{
+	list-style-image:url(images/ok.ico);
+	
+	}
+.sayfalink li:hover{
+	list-style-image:url(images/ko.ico);
+	background-color:#E2FEEF;
+}
+.sayfalink li a{
+	display: block;
+	width:100%;
+	
+	border-top:1px solid #fff;
+	font:bold 1em/2em verdana;
+}
+
+.sayfalink li a:hover{
+	text-decoration: none;
+	color:#8C37D9;
+	
+	}
+#liste{
+	list-style:none;
+}
+/*hata için*/
+
+.hata{
+	border: 1px solid #D00;
+	color:#8C37D9;
+	}
+	/*sayfa alt yapısı*/
+#icerik{
+	margin:0 auto;
+	width:74.9%;
+	background-color:#ffffff;
+	border:solid 1px #000000;
+}
+
+
+#icerik2{
+	margin:0 auto;
+	padding:5px 5px 5px 5px;
+	width:100%;
+	background-color:#ffffff;
+	/*border:solid 2px #ACABC4; */
+}
+
+/*başlık kısmı*/
+#Header{
+	margin:0 0 10px 0;
+	height:149px;
+	background:url(images/header.jpg) top left no-repeat;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+}
+#Header h1 a{
+	margin:20px 0 0 50px;
+	padding:20px 0 0 100px;
+	color:#010E83;
+	font-size:46px;
+
+	font-family:inherit;
+}
+#Header h1 a:hover{
+	margin:20px 0 0 50px;
+	padding:20px 0 0 100px;
+	font-size:46px;
+	color:#497E8D;
+
+}
+
+/*title için */
+#Title{
+	margin:-72px 0 0 0;
+	padding:10px 0 0 19px;
+	background-color:Transparent;
+}
+#Title a{
+	color:#ffffff;
+	text-decoration:none;
+	background-color:inherit;
+	font-size:4em;
+	font-weight:normal;
+	font-family:inherit;
+}
+
+/*ana menü için */
+.headermenu{
+	padding:33px 0 0 0px;
+	height:1em;
+	line-height:1em;
+	color:#000000;
+}
+.headermenu ul{
+	margin: 0;
+	float: left;
+	width: 600px;
+}
+
+.headermenu ul li{
+display: inline;
+}
+
+.headermenu ul li a{
+	float: left;
+	color:#15107A;
+	padding: 5px 11px;
+	text-decoration: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	font:bolder 16px/30px  "Trebuchet MS",Arial, Helvetica, sans-serif;
+	
+}
+
+.headermenu ul li a:hover, .headermenu ul li .selected{
+	color: #FFFFFF !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #0000A0;
+}
+
+/*sağ sütun */
+#sagsutun{
+	margin:0 auto;
+	padding:0 0 0 0;
+	width:20%;
+	float:right;
+}
+
+/*Kullanıcı giriş bölümü*/
+#giris{
+	margin:4px 0;
+	border:1px solid #899aba;
+	text-align:center;
+	font-size:0.9em;
+}
+
+/*solkısım konumu*/
+#solsutun{
+	margin:0 196px 0 0; 
+}
+
+/*ana böülüm sol taraf */
+#solicerik{
+	padding: 0 20px 0 12px;
+	line-height: 1.6em;
+}
+#solicerik h2{
+	margin:0 auto;
+	padding:4px 0 4px 0;
+	background-color:#F2F3F7; 
+	font-family: "Book Antiqua", Helvetica, Tahoma, Arial, sans-serif;
+	border:1px solid #899aba;
+	text-align: left;
+	color:#000000;
+	font-size: 1.6em;
+}
+#solicerik p{
+	background-color:inherit;
+	text-align: justify;
+	color:#494949;
+}
+#solicerik a{
+	background-color:inherit;
+	text-decoration: none;
+	color: #000080;
+}
+
+
+/*footer kısmı */
+#Footer{
+	margin:10px 0 0 0;
+	padding:4px 0 4px 11px;
+	background-color:#575F9F;
+	border:solid 1px #000000;
+	text-align:center;
+	color: #ffffff;
+}
+#Footer a{
+	background-color: inherit;
+	text-decoration: underline;
+	color:#ffffff;
+}
+/*cizilen kutularrın bileşenleri*/
+.sagust{
+	float:right;
+	height:11px;
+	width:11px;
+	background-repeat:no-repeat;
+	background-image:url(images/sagust.gif);
+}
+.solust{
+	float:left;
+	height:11px;
+	width:11px;
+	background-repeat:no-repeat;
+	background-image:url(images/solust.gif);
+}
+.sagalt{
+	margin:-11px 0 0 0;
+	float:right;
+	height:11px;
+	width:11px;
+	background-repeat:no-repeat;
+	background-image:url(images/sagalt.gif);
+}
+.solalt{
+	margin:-11px 0 0 0;
+	float:left;
+	height:11px;
+	width:11px;
+	background-repeat:no-repeat;
+	background-image:url(images/solalt.gif);
+}
+
+/*sağ kısımdaki kutuların çizimi */
+.sagicerik{
+	margin:0 auto;
+	padding:8px 7px 8px 4px;
+	background-color:#F2F3F7;
+	border:1px solid #899aba;
+	line-height:1.4em;
+}
+.sagicerik h3{
+	margin: 5px 0 0 0;
+	padding: 0 0 8px 0;
+	background-color:inherit;
+	color:#575F9F;
+	text-align:left;
+	font-size: 1.3em;
+	
+}
+.sagicerik h4{
+	font-size: 1em;
+	margin: 5px 0 0 0;
+	background-color:inherit;
+}
+.sagicerik p{
+	margin: 0 0 14px 0;
+	text-align: justify;
+	background-color:inherit;
+	color: #000000;
+	font-size: 90%;
+}
+.sagicerik a{
+	background-color:inherit;
+	text-decoration: none;
+	color: #000066;
+}
+
+
+
+.son{
+	margin:5px;
+	clear:both;
+}

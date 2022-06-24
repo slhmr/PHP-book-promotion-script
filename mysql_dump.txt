@@ -1,0 +1,262 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Anamakine: localhost
+-- �retim Zaman�: 28 May�s 2009 saat 17:08:27
+-- Sunucu s�r�m�: 5.0.51
+-- PHP S�r�m�: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Veritaban�: `salihemrekul`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `favourites`
+--
+
+CREATE TABLE `favourites` (
+  `id` int(20) NOT NULL auto_increment,
+  `kitabid` int(20) NOT NULL,
+  `userid` int(20) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=38 ;
+
+--
+-- Tablo d�k�m verisi `favourites`
+--
+
+INSERT INTO `favourites` (`id`, `kitabid`, `userid`) VALUES
+(24, 33, 1),
+(25, 27, 1),
+(26, 33, 5),
+(27, 29, 5),
+(34, 36, 5),
+(35, 35, 5),
+(36, 56, 5),
+(37, 43, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `kitaplar`
+--
+
+CREATE TABLE `kitaplar` (
+  `kitap_no` int(11) unsigned NOT NULL auto_increment,
+  `yazar_no` int(11) unsigned NOT NULL,
+  `yayinevi_no` int(11) unsigned NOT NULL,
+  `k_isim` varchar(512) collate utf8_turkish_ci NOT NULL,
+  `tanitim` longtext collate utf8_turkish_ci NOT NULL,
+  `sayfa_sayisi` int(11) NOT NULL,
+  `kapak_resim` varchar(128) collate utf8_turkish_ci NOT NULL,
+  `ceviri` tinyint(3) NOT NULL,
+  `ekletarih` int(20) NOT NULL,
+  `tarih` varchar(32) collate utf8_turkish_ci NOT NULL,
+  `views` bigint(20) NOT NULL,
+  PRIMARY KEY  (`kitap_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=57 ;
+
+--
+-- Tablo d�k�m verisi `kitaplar`
+--
+
+INSERT INTO `kitaplar` (`kitap_no`, `yazar_no`, `yayinevi_no`, `k_isim`, `tanitim`, `sayfa_sayisi`, `kapak_resim`, `ceviri`, `ekletarih`, `tarih`, `views`) VALUES
+(26, 11, 1, 'Beni Ararken', 'Bir gün uyandığınızda, kendinizi bambaşka bir hayatı yaşarken bulsanız ne\r\nyapardınız? Değer verdiğiniz her şeyden ve herkesten uzak, başka\r\nseçimlerinizin sonucu bir hayatta. Üstelik bu hayatın da size ait olduğunu\r\nbilerek…\r\n\r\nDuygusal ilişkiler ve hipnozla tedavi konusunda uzman olan ve bugüne kadar\r\nçok sayıda kadına danışmanlık hizmeti veren Seda Diker’den, hayatınızı\r\ndeğiştirecek, çarpıcı bir roman…\r\n\r\nKendimize ve sahip olduklarımıza gerçekten doğru bakabiliyor muyuz?\r\nHayatımıza yön veren ve hiç farkında olmadığımız karar anları neler? O\r\nanlara nasıl müdahale edebiliriz?\r\n\r\nParalel evrenler arasında binlerce hayat seçeneğinden birini yaşıyorsak,\r\nhayatımızı değiştirebiliriz demektir. Ama nasıl?..\r\n\r\nBeni Ararken’i bitirdiğinizde, hayat sizin için başka bir şeye dönüşecek…', 336, 'kitap-026.bmp', 0, 1243517097, '1-OCAK-1990', 40),
+(28, 10, 2, 'Fiyonklu İstanbul Dürbünü', 'Giysilerin Penceresinden…\r\n\r\nO elbiseyle poz verirken neler vardı aklında? \r\n\r\nGiysilerin her biri kullanıldıktan sonra yaşamdan çıkıp gider mi? \r\nYoksa bir süre de olsa severek kuşanılan bir kabuk gibi hep sahibinin bir parçası kalarak, iz bırakarak, hoş kokulu bir hatıralar demetini mi kucaklar?\r\n\r\n“Gül İrepoğlu’nun yeni eserini çok severek okudum. Diyebilirim ki, tadı damağımda kaldı. Bir anı-roman mı, otobiyografik özellikler de taşıyan deneme-roman mı? Belki, giysiler, giyim kuşam dünyasında bir masal-roman. Evet masal-roman! \r\nYaşamın acılarını bilen, ama o acıları güzelliklerle, estetikle \r\nyenmek isteyen bir anlatıcının kaleme getirdikleri...”\r\nSelim İleri', 326, 'kitap-028.bmp', 2, 1258974585, '', 32),
+(29, 13, 1, 'Cocuk Ölümü �zarkıları', '“Oyunun sonlarına doğruydu. Başım hafifçe öne düşmüş, gözlerim kısılı, yüzümde buruk bir gülümseme ama gülümseme, son anların azalan neşesi üzerinde düşünceye dalmıştım. Dün gibi hatırlıyorum. Artık hatırlama oyunu oynadığımız için. Solan kuruyan dökülen ufalanıp üflenip giden sümbül yapraklarını anlayışlı bir hüzünle düşünen ve artık yorulmaya başlamış biri kadar ilgi çekici ve yakındım, bu anlarda, ölüm kararı vermeye, kim bilir kaçıncı kez. Ama uzun sürmüyordu. Artık. Çok çok bir düş kadar. Anlar azalıyordu, azalan yakınlıkla. Artan tedirginlikle, ölümün eşiğinde. Tehlike! Bırakma zamanı! Sonra kala kala tek bir an kalacaktı, dehşet anı. Önünde, bekleyen, bomboş! Bir an. İçinden çıkılması imkânsız olacak bir. Yiyip yutacak bir. An. Ne?”', 84, 'kitap-029.bmp', 2, 1243148828, '', 23),
+(34, 9, 4, 'Pinhan', 'Sabahları haylaz, geceleri ise sıkıntı deryalarında boğulan; doğuştan iki başlı, doğuştan iki bedene ve iki ruha sahip olan bir çocuğun; elmaların güzelliğine aldanıp girdiği ve gönlün nereyi gösterirse o yöne git diyen Durribaba’nın türbesine attığı adımla çıktığı yolculuğun hikayesidir Pinhan.\r\n\r\nTürbede geçirdiği yıllardan sonra gönlünün doğrultusunda İstanbul’da kendi gibi iki başlı bir mahalle bulur. Dört kapısından dört rüzgar giren bu mahallenin eski adı Akrep Arif yeni adı ise Nakş-ı Nigardır. Fakat bu iki isim birbirlerini hiç sevmezler de. Bir bayram sabahı başlayan kavgalarını sadece ve sadece mahallenin kendileri gibi ikibaşlı olan Pinhan bitirebilirdi. Giriştiği bu savaşın sonunda Pinhan vücudunda yolculuğa çıkar; kendi içindeki insanlarla savaşır, yıllardır yakasından düşmeyen bu utancı içindeki herkese gösterir ve kendini bulur.', 258, 'kitap-034.jpg', 2, 1243430854, '10-NİSAN-2007', 13),
+(35, 17, 1, 'Aslında Aşk Da Yok 1', '�zimdilerde kadın-erkek eşitliğinden, bekaretten, toplum baskısından ya da törelerden bahsedildiğine sık sık tanık oluyoruz. Ekranlarda, gazetelerde, hatta evlerimizde, kendi içimizde sıklıkla düşündüğümüz veya tartıştığımız konulardır bunlar. Öyle ki kalıplaşmış, sloganlaşmış daha da öteye giderek klişeleşmiş bir çok söylem var artık.\r\n\r\n“Aslında Aşk da Yok” Haziran ‘89 da 25. baskısını yapmış, yukarıda bahsini ettiğim söylemlerin çoğunu içinde barındıran bir kitap. O yıllarda sekiz değil de yirmibeş yaşımda olsaydım ve bu kitabı okusaydım belki kitap bana heyecan verebilirdi. “İşte söylenmeyeni söylemeyi başarmış, cesur bir kadın!” diyebilirdim. Ancak şu anda bana sadece bir “günlük” okuduğum izlenimi vermekten öteye geçemedi.', 156, 'kitap-035.jpg', 2, 1243516073, '1-OCAK-1990', 47),
+(36, 9, 4, 'Kupa Ası', 'Olaylar içinde olaylar…\r\n\r\n\r\nElia Kazan’dan Prenses Süreyya’ya, The Beatles’tan Muhammed Ali’ye, ünlü Rum armatör Onassis’ten Nubar Gülbenkyan’a, Zsa Zsa Gabor’dan Sultan Murad’ın torunu Prens Osman’a, Ermeni terörünü başlatan Gourgen Yanıkyan’dan “tüp bebek” öncüsü Dr. Landrum B. Shettles’a, Geceyarısı Ekspresi’nin kahramanı İmralı kaçağı Hayes’ten Ecevit’e suikast girişiminde bulunan Stavros’a kadar pek çok ünlü isimle röportajlar yapan; Turgut Özal’ın ABD’deki ameliyatı, Diktatör Noriega’nın Amerikalılar tarafından tutuklanması, Efe Özal’ın “hayalici” tarafından ağırlanması, Başbakan Çiller’in ABD’deki gayrimenkulleri gibi ses getiren haberlere imza atan deneyimli gazeteci Doğan Uluç’tan önemli bir kitap.\r\n\r\n“Sevgili dostum Doğan Uluç 40 yıllık gazetecilik anılarını kitaplaştırmış.\r\nSayfaları çevirdikçe, Uluç’u gazeteci yapan habercilik aşkını hemen seziyorsunuz. Uluç’un büyük ses getiren haberleri günlerce tartışıldı, siyasi ve diplomatik krizler yarattı. Hemen hemen tüm haberleri gazetelerimizin birinci sayfasından verildi. Bu haberler polisiye olaylardan magazine, siyasetten toplumsal sorunlara uzanan geniş bir yelpaze oluşturdu. Ama daha derin bakıldığında, Doğan Uluç haberlerinin arkasında daima ‘insan’ ve ‘insanlık halleri’nin bulunduğu görülür. Merak etmeyen kişi gazeteci olamaz. Doğan Uluç’un özelliği ve farklılığı ise ‘merak’ının zenginliği ve bu ‘merak’ın peşinde koşuyor olmasının eksilmeyen heyecanıdır. Doğan Uluç, bu kitabı ile Türk basınının 50 yıllık tarihine de bir ayna tutuyor. Nereden geldiğimizi, nereye gittiğimizi kendi tanıklığıyla anlatırken, endüstriyel medyada bir muhabirin neleri değiştirebileceğini, nasıl farklılıklar yaratacağını da gösteriyor.\r\nDilerim bu ‘aşk’ı hiç küllenmez ve ‘merak’ı sonsuza dek sürer.”', 254, 'kitap-036.bmp', 2, 1243431816, '4-MAYIS-2009', 16),
+(43, 27, 4, 'Sarı Sessizlik', 'On binlerin yürek yakan trajedisi yüz yıl sonra ilk kez böylesine ete kemiğe bürünüyor.\r\nSarıkamış’ta yitip giden şikâyetçi ruhların sessiz haykırışı yürekleri ilk kez böyle dağlıyor.\r\nMülazım Sacit ve fedakâr askerlerinin o uçsuz bucaksız beyazlıkta ideallerine ulaşmak ve hayatta kalabilmek için tek çareleri vardı: “Hedefe gitmek!” Kesin bir emir almışlardı ve artık asla geri dönmek yoktu...\r\nSarı Sessizlik‘i okurken, 1914-1915 çetin kışında Doğu Cephesi’nde yaşanan büyük felaketi Mülazım Sacit ve bölüğüyle birlikte anbean yaşayacak, siz de iliklerinize kadar donacak, dehşetle sarsılacak ve soracaksınız: Neden?\r\nİnsanı derinden sarsan, yaşama sevincine ve insan sevgisine odaklı, barış özlemini haykıran destansı bir anlatı.\r\nOya gibi işlenmiş, soluk kesen bir savaş ve kayboluş romanı…', 344, 'kitap-043.bmp', 2, 1243493643, '1-ARALIK-2008', 8),
+(56, 24, 4, 'Kar Manastırı', 'Himalayalar’ın eteğindeki küçük bir köyde yaşayan Deçen’in bilgeliğe, bambaşka bir dünya ve “ben” algısına yolculuğu. Matthieu Ricard’ın şaşırtıcı derinliği ve yetkin dili, sizi de bu yolculuğa dahil edecek. Kar Manastırı, içinizdeki engelleri aşmanın ve huzura erişmenin kitabı…', 122, 'kitap-056.bmp', 0, 1243509769, '11-ARALIK-2008', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `kitapturler`
+--
+
+CREATE TABLE `kitapturler` (
+  `kitap_no` int(11) unsigned NOT NULL,
+  `tur_no` int(11) unsigned NOT NULL,
+  KEY `kitap-no` (`kitap_no`,`tur_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Tablo d�k�m verisi `kitapturler`
+--
+
+INSERT INTO `kitapturler` (`kitap_no`, `tur_no`) VALUES
+(26, 10),
+(26, 11),
+(26, 12),
+(27, 2),
+(28, 2),
+(35, 1),
+(35, 2),
+(43, 12),
+(56, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `puanla`
+--
+
+CREATE TABLE `puanla` (
+  `puanlano` int(32) NOT NULL auto_increment,
+  `kitapno` int(32) NOT NULL,
+  `kisi` int(32) NOT NULL,
+  `ortalama` double NOT NULL,
+  `oy` int(32) NOT NULL,
+  PRIMARY KEY  (`puanlano`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=129 ;
+
+--
+-- Tablo d�k�m verisi `puanla`
+--
+
+INSERT INTO `puanla` (`puanlano`, `kitapno`, `kisi`, `ortalama`, `oy`) VALUES
+(61, 0, 0, 0, 0),
+(128, 29, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `turler`
+--
+
+CREATE TABLE `turler` (
+  `tur_no` int(11) unsigned NOT NULL auto_increment,
+  `t_isim` varchar(255) collate utf8_turkish_ci NOT NULL,
+  PRIMARY KEY  (`tur_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=13 ;
+
+--
+-- Tablo d�k�m verisi `turler`
+--
+
+INSERT INTO `turler` (`tur_no`, `t_isim`) VALUES
+(1, 'Macera'),
+(2, 'Siir (Ceviri)'),
+(4, 'Romantik'),
+(10, 'Hikaye'),
+(11, 'Anı'),
+(12, 'Spiritüel');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `users`
+--
+
+CREATE TABLE `users` (
+  `uid` int(10) NOT NULL auto_increment,
+  `rumuz` varchar(64) collate utf8_turkish_ci NOT NULL,
+  `pass` varchar(32) collate utf8_turkish_ci NOT NULL,
+  `mail` varchar(64) collate utf8_turkish_ci default NULL,
+  `isim` varchar(100) collate utf8_turkish_ci NOT NULL,
+  `role` varchar(32) collate utf8_turkish_ci NOT NULL,
+  `admin` tinyint(4) NOT NULL,
+  `access` int(11) NOT NULL,
+  `resim` varchar(32) collate utf8_turkish_ci NOT NULL,
+  `adres` varchar(512) collate utf8_turkish_ci NOT NULL,
+  `tel` varchar(128) collate utf8_turkish_ci NOT NULL,
+  PRIMARY KEY  (`uid`),
+  UNIQUE KEY `rumuz` (`rumuz`,`mail`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=6 ;
+
+--
+-- Tablo d�k�m verisi `users`
+--
+
+INSERT INTO `users` (`uid`, `rumuz`, `pass`, `mail`, `isim`, `role`, `admin`, `access`, `resim`, `adres`, `tel`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@example.com', 'Admin', '', 1, 1243439000, 'avatar-001.jpg', '', ''),
+(5, 'salih', 'c12e01f2a13ff5587e1e9e4aedb8242d', 'salihemrekul@hotmail.com', 'salih', 'Power User', 1, 1243516052, 'avatar-005.gif', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `yayinevleri`
+--
+
+CREATE TABLE `yayinevleri` (
+  `yayinevi_no` int(11) unsigned NOT NULL auto_increment,
+  `yay_isim` varchar(255) collate utf8_turkish_ci NOT NULL,
+  PRIMARY KEY  (`yayinevi_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=6 ;
+
+--
+-- Tablo d�k�m verisi `yayinevleri`
+--
+
+INSERT INTO `yayinevleri` (`yayinevi_no`, `yay_isim`) VALUES
+(1, 'Papatya Yayinevi'),
+(2, 'Metis Yayinlari'),
+(3, 'Timaş Yayınları'),
+(4, 'Kul Yayınları'),
+(5, 'X Yayıncılı');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `yazarlar`
+--
+
+CREATE TABLE `yazarlar` (
+  `yazar_no` int(11) unsigned NOT NULL auto_increment,
+  `y_isim` varchar(255) collate utf8_turkish_ci NOT NULL,
+  `ozgecmis` text collate utf8_turkish_ci NOT NULL,
+  `resim` varchar(32) collate utf8_turkish_ci NOT NULL,
+  PRIMARY KEY  (`yazar_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=28 ;
+
+--
+-- Tablo d�k�m verisi `yazarlar`
+--
+
+INSERT INTO `yazarlar` (`yazar_no`, `y_isim`, `ozgecmis`, `resim`) VALUES
+(9, 'Doğan Uluç', 'Doğan Uluç 1970’li yılların başında Amerika’da U.N. Diplomat dergisi, Turkey Year Book, Anavatan gazetesini çıkardı. Türk Amerikan Dernekleri Federasyonu ile Türk Amerikan Dernekleri Asamblesi’nden ‘Yaşam Boyu Başarı Ödülü’ aldı. ‘United Nations Correspondents Association’ (UNCA) başkanlığına seçildi. İstanbul Gazeteciler Cemiyeti’nin yarışmasında Güncel Yazılar dalında ‘Yılın Gazetecisi’ unvanına layık görüldü.', 'Yazar-009.bmp'),
+(10, 'Gül İrepoğlu', '?', 'Yazar-010.bmp'),
+(11, 'Seda Diker', 'Seda Diker, yönlendirmeli meditasyon ve\r\nhipnozla ilgili çalışmalarına on yıl önce,kendisine tıp doktorları\r\ntarafından kısırlık tanısı konulması üzerine başladı. Bir yıl boyunca hipnoz\r\nve bilinçaltı temizliğine katılarak dişilikle ve annelikle ilgili\r\nkorkularının tamamını temizlemeyi başardı. Yeniden tıbbi yardıma\r\nbaşvurduğunda hemen hamile kaldı.\r\nHipnozun kendi hayatındaki etkisini gören Diker, New York’ta hipnoz\r\nokuluna gitti. ABD’de kanser ve tüp bebek tedavisi gören hastalarla çalıştı.\r\nGeçmiş yaşam terapisi öğrendi. Bilinçaltı, duygusal değişim ve dişilik\r\nbilgileri üzerine uzmanlaştı. National Guild of Hypnotists\r\n(Ulusal Hipnoz Uzmanları Derneği) üyesi oldu. 2006 ağustos ayında Türkiye’ye\r\nyerleşti. 8 yaşında bir oğlu var.', 'Yazar-011.bmp'),
+(13, 'Hamdi  Koç', '1963’te Ordu’nun Fatsa ilçesinde doğdu. Kabataş Lisesi’nden mezun oldu. Bir süre Orta Doğu Teknik Üniversitesi’nde öğrenim gördü. Ardından İstanbul Üniversitesi İngiliz Dili ve Edebiyatı Bölümü’nü bitirdi. "Hokka" dergisinin yayın kurulunda yer aldı. Shakespeare, Faulkner, Beckett ve Joyce’dan çeviriler yaptı. İlk romanı olan "Çocuk Ölümü �zarkıları" 1992’de yayımlandı. "Melekler Erkek Olur" (2002) adlı romanıyla Türkiye’nin en çok okunan yazarları arasında yerini aldı. Yazarın "Çiçeklerin Tanrısı" (2003) ve "İyi Dilekler Ülkesi" (2005) adlı iki romanı daha vardır.', 'Yazar-013.bmp'),
+(16, 'Sabahattin Ali', '25 �zubat 1907 Gümülcine doğumlu Sabahattin Ali’nin 2 Nisan 1948′de Kırklareli’ndeki şaibeli ölümünün arından bu gün tam 60 yıl geçmiştir.\r\n\r\nİstanbul Öğretmen Okulu mezunu Sabahattin Ali bir yıl mesleğini yaptıktan sonra, Milli Eğitim Bakanlığı tarafından 1928′de Almanya’ya gönderilir. Almanya’da iki yıl kaldıktan sonra Anadolu’nun çeşitli bölgelerinde Almanca öğretmenliği, Milli Eğitim Bakanlığı Yayın Müdürlüğü’nde memurluk ve Devlet Konservatuarı’ nda dramaturgluk yapar.\r\n\r\nİlk yazıları 1925-1926 yılları arasında Balıkesir’de “Irmak” dergisinde yayınlanır. 1930′lu yıllarda Türk öykücülüğüne yeni bir soluk getirir. Gerçekçi öykülerinde tanımlamakta güçlük çektiğimiz insani duygularımızı, insanlığın zavallılığını, biraz da ne denli basit varlıklar olduğumuzu mükemmel üslubuyla tasvir eder.', 'Yazar-016.jpg'),
+(17, 'Duygu Asena', '19 Nisan 1946′da İstanbul’da doğdu. Atatürk’ün yaveri olan ve dönemin CHP milletvekili Ali �zevket Öndersev’in torunudur. Orta öğrenimini Kadıköy Özel Kız Koleji’nde, yüksek öğrenimini ise İstanbul Üniversitesi’nde tamamladı. Pedagoji Bölümü mezunu olan Asena iş hayatına da pedagog olarak başladı.\r\n\r\n1972 yılında Hürriyet gazetesinin Kelebek ekinde ilk yazısı yayınlandı. O sıralar yazılarında “�zirin” takma adını kullandı. Bu tarihten sonra çeşitli dergi ve gazetelerde gerek yazar gerekse yönetici konumunda görev yaptı.\r\n\r\n1987 yılında yayınlanan ilk kitabı “Kadının Adı Yok” ile büyük çıkış yakaladı. Yalnız, kitap müstehcen bulundu ve yasaklandı. Uzun süren dava sonucunda yeniden basılmasına izin verilen kitabı ünlü yönetmen Atıf Yılmaz sinemaya aktardı.', 'Yazar-017.jpg'),
+(23, 'Sevgi Ersoy', 'Sevgi ERSOY 1952 yılında Bursa’da doğdu… 1974 yılında Devlet Güzel Sanatlar Akademisi İç Mimarlık Bölümü’nden mezun oldu. Otuz yıldır, parapsikoloji, dinler, metafizik, metapsişik ve ezoterik öğretiler konularında araştırma ve inceleme yapıyor, deneysel çalışmalar yürütüyor. \r\nBirçok ulusal ve uluslararası tıp kongresine “Yardımcı Tıp Tekniği Olarak Reiki” konusunda konuşmacı olarak katılan Ersoy’un fahri doktorluk unvanı bulunuyor. \r\nReiki grand master ve magnified healing eğitmeni olan Ersoy ayrıca, tekniği dünyada sadece kendisine ait olan mucize taş aragonit şifası dersleri veriyor ve şifa uygulamaları yapıyor.\r\n2000 yılında eşi ve on yedi arkadaşıyla birlikte spritüel bir merkez olan Merkez Bilgi Alanı Vakfı’nı kuran yazarın, Mutfak Penceremdeki Hindistan adlı yayımlanmış bir kitabı bulunuyor.', 'Yazar-023.bmp'),
+(24, 'Matthieu Ricard', 'Matthieu Ricard 1946’da Paris’te doğdu. Hindistan’a ilk yolculuğunu 1967’de gerçekleştirdi. Burada Tibetli Budist rahiplerle tanıştı. Pastör Enstitüsü’nde moleküler biyoloji alanında doktorasını tamamladıktan sonra Himalayalar’a yerleşmeye karar verdi ve keşiş oldu. Budizm’e yaptığı bu dönüşle muhteşem kariyerini bir kenara itti. 1972’den beri Tibet’te yaşayan Ricard, dünyadaki sayılı Budizm uzmanları arasındadır. Halen Nepal’deki �zenşen Manastırı’nda yaşayan Ricard, 1989’dan beri Dalay Lama’nın sözcülüğünü yapmaktadır. Keşiş ve Filozof ile Kar Manastırı da Ricard’ın bestseller olmuş diğer iki önemli eseridir ve 21 dile çevrilmiştir.', 'Yazar-024.bmp'),
+(25, 'Debbie Frank', 'Debbie Frank, Daily Mirror, Sunday Mirror gazetelerinde ve First dergisinde astroloji köşeleri hazırlıyor. Yirmi yıldır astrolog olarak insanların sorunlarına çözümler bulmaya çalışan Frank, hayatının sarsıntılarla geçen son sekiz yılında Prenses Diana’ya destek oldu. Akrep burcu olan Debbie Frank eşi ve kızıyla Londra’da yaşıyor.', 'Yazar-025.bmp'),
+(26, 'Ahmet Ümit', 'Ahmet Ümit 1960’ta Gaziantep’te doğdu. 1983’te Marmara Üniversitesi Kamu Yönetimi Bölümü’nü bitirdi. 1985-1986 yıllarında Moskova Sosyal Bilimler Akademisi’nde eğitim gördü. 1989’da "Sokağın Zulası", 1992’de "Çıplak Ayaklıydı Gece", 1994’te "Bir Ses Böler Geceyi", 1995’te "Masal Masal İçinde", 1996’da "Sis ve Gece", 1998’de "Kar Kokusu", 1999’da "Agatha’nın Anahtarı" adlı polisiye öykü kitabı, 2000’de "Patasana", 2002’de "Kukla" ve 2003’te "Beyoğlu Rapsodisi" adlı romanları ve 2002’de "�zeytan Ayrıntıda Gizlidir", 2004’te "Aşk Köpekliktir" adlı öykü kitaplarıyla "Kavim", "Ninatta’nın Bileziği" romanları yanı sıra 2007’de "İnsan Ruhunun Haritası" adl› denemesi yayımlandı. Ahmet Ümit’in "Başkomser Nevzat, Çiçekçinin Ölümü" adlı bir de çizgi romanı vardır.', 'Yazar-026.bmp'),
+(27, 'Cihangir Akşit', 'Cihangir Akşit 1953 yılında İstanbul’da doğdu. Kara Harp Okulu’nu (1974), Kara Harp Akademisi’ni (1984), NATO Savunma Koleji’ni (1987) ve Silahlı Kuvvetler Akademisi’ni (1995) bitirdi. Tümen komutanlığı dahil her seviyedeki komutanlık ve karargâh görevinde bulunduktan sonra 2008 yılında tümgeneral rütbesiyle TSK’den emekli oldu. Meslek yaşamı boyunca resimle de yakından ilgilenen ve kişisel sergiler açan Akşit’in, Çiğiltepe: Miralay Reşat Bey ve Vatan Savunmasında 27 Yıl adlı ikinci kitabı da Doğan Kitap tarafından yayınlandı.', 'Yazar-027.bmp');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo yap�s�: `yorum`
+--
+
+CREATE TABLE `yorum` (
+  `yorum_no` bigint(20) NOT NULL auto_increment,
+  `kitabid` varchar(250) collate utf8_turkish_ci NOT NULL default '',
+  `yorum` varchar(250) collate utf8_turkish_ci NOT NULL default '',
+  `user` int(4) NOT NULL,
+  `tarih` int(20) NOT NULL,
+  PRIMARY KEY  (`yorum_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci AUTO_INCREMENT=45 ;
+
+--
+-- Tablo d�k�m verisi `yorum`
+--
+
+INSERT INTO `yorum` (`yorum_no`, `kitabid`, `yorum`, `user`, `tarih`) VALUES
+(32, '26', 'okumadım', 1, 1243148828),
+(33, '26', 'okumak için bu kitabı', 1, 1243153660),
+(34, '26', 'bakalım', 1, 1243158614),
+(41, '28', 'yapalım ozaman', 1, 1243231397),
+(42, '28', 'bizden ii gelsin', 1, 1243274544),
+(43, '29', 'yapalım ozaman', 1, 1243429219),
+(44, '43', 'ekleyelim', 5, 1243514646);
